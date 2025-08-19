@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://EhsanTahvilian.github.io/sitemap.xml

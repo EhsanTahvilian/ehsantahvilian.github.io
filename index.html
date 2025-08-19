@@ -1,17 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Smith - Portfolio</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #333; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ehsan Tahvilian — PhD Candidate at University of Waterloo</title>
+
+  <meta name="description" content="Neuromechanics of human locomotion and optimal control. Ehsan Tahvilian — PhD Candidate at the University of Waterloo." />
+  <meta name="author" content="Ehsan Tahvilian" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ehsan Tahvilian — Portfolio" />
+  <meta property="og:description" content="Neuromechanics • Optimal Control • Biomechatronics" />
+  <meta property="og:image" content="assets/Ehsan_Logo.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Welcome to My Personal Website</h1>
-    <p>Hello! I'm John Smith, a Software Engineer specializing in web development.</p>
-    <p>Check out my work on <a href="https://github.com/your-username" target="_blank">GitHub</a>.</p>
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav-wrap">
+    <div class="nav container">
+      <a class="brand" href="#top" aria-label="Home">
+        <img src="assets/Ehsan_Logo.png" alt="" width="32" height="32"><span>Ehsan Tahvilian</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <ul id="navMenu">
+          <li><a href="#about" data-nav>About</a></li>
+          <li><a href="#interests" data-nav>Research</a></li>
+          <li><a href="#experience" data-nav>Experience</a></li>
+          <li><a href="#education" data-nav>Education</a></li>
+          <li><a href="#projects" data-nav>Projects</a></li>
+          <li><a href="#publications" data-nav>Publications</a></li>
+          <li><a href="#awards" data-nav>Honors</a></li>
+          <li><a href="#contact" data-nav>Contact</a></li>
+          <li><button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="top" class="hero container">
+      <div class="hero__content">
+        <p class="eyebrow">Neuromechanics · Optimal Control · Biomechatronics</p>
+        <h1 class="title reveal">Ehsan Tahvilian</h1>
+        <h2 class="subtitle reveal-delay">PhD Candidate · University of Waterloo</h2>
+        <p class="lead reveal-delay2">
+          I study the neuromechanics of human locomotion and design optimal‑control models with applications in rehabilitation, assistive technologies, and human–robot interaction.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="assets/EhsanTahvilian_Resume.pdf" download>Download CV</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+        <div class="social">
+          <a class="icon-link" href="https://www.linkedin.com/in/ehsan-tahvilian/" target="_blank" rel="noopener" aria-label="LinkedIn"></a>
+          <a class="icon-link" href="https://github.com/EhsanTahvilian" target="_blank" rel="noopener" aria-label="GitHub"></a>
+          <a class="icon-link" href="mailto:ehsan.tahvilian@uwaterloo.ca" aria-label="Email"></a>
+          <a class="icon-link" href="https://www.aramilab.com/" target="_blank" rel="noopener" aria-label="Arami Lab"></a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <div class="photo-wrap float">
+          <img src="assets/Ehsan.png" alt="Portrait of Ehsan Tahvilian">
+          <div class="ring ring--a"></div>
+          <div class="ring ring--b"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2 class="section__title"><span>About</span></h2>
+      <div class="two-col">
+        <div>
+          <p>
+            Ehsan Tahvilian is currently a PhD candidate in the Department of Mechanical and Mechatronics Engineering at the University of Waterloo, Canada. His research focuses on the neuromechanics of human locomotion, with a particular emphasis on optimal control methods. He is broadly interested in human movement modeling, biomechatronics, and control theory, with applications in rehabilitation, assistive technologies, and human–robot interaction.
+          </p>
+          <p>
+            He completed his MSc in Mechanical Engineering (Applied Design) at Sharif University of Technology, where his research involved complex human activity recognition in Parkinson’s patients using IMU‑based wearable systems. He earned his BSc in Mechanical Engineering (Mechatronics) from Isfahan University of Technology in 2020, graduating first in his class. He also gained international research experience through an internship at the M&amp;MOCS research center in Italy, where he worked on computational mechanics of composite structures under the supervision of Prof. Francesco dell’Isola and Prof. Erden Yildizdag.
+          </p>
+          <p>
+            I’m a member of <a href="https://www.aramilab.com/" target="_blank" rel="noopener">Arami Lab – Neuro‑Mechanics and Assistive Robotics</a> at the University of Waterloo.
+          </p>
+        </div>
+        <ul class="pill-list">
+          <li>Human Locomotion</li><li>Optimal Control</li><li>Biomechatronics</li><li>Human–Robot Interaction</li><li>Wearables &amp; Sensing</li><li>Deep Learning</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS -->
+    <section id="interests" class="section container">
+      <h2 class="section__title"><span>Research Interests</span></h2>
+      <div class="grid grid-4">
+        <article class="i-card tilt"><div class="i-icon">&#129520;</div><h3>Neuromechanics</h3><p>Modeling muscle/joint dynamics and neural control in human gait.</p></article>
+        <article class="i-card tilt"><div class="i-icon">&#9881;&#65039;</div><h3>Optimal Control</h3><p>Trajectory optimization and inverse optimal control for individualized costs.</p></article>
+        <article class="i-card tilt"><div class="i-icon">&#129302;</div><h3>Assistive Robotics</h3><p>Exoskeleton control for rehabilitation and HRI.</p></article>
+        <article class="i-card tilt"><div class="i-icon">&#128241;</div><h3>Wearables</h3><p>IMU‑based sensing, activity recognition, and gait parameter estimation.</p></article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section container">
+      <h2 class="section__title"><span>Experience</span></h2>
+      <div class="timeline">
+        <article class="t-item"><div class="t-dot"></div><header><h3>PhD Researcher <span>@ University of Waterloo — Arami Lab</span></h3><time>2023 — Present</time></header><ul><li>Inverse Optimal Control for individualized cost functions and 3D joint/GRF trajectories.</li><li>Investigating gait individuality and optimality under varied neural/physical conditions.</li><li>Controller development for the Indego lower‑limb exoskeleton to assist SCI (C/D) patients.</li></ul></article>
+        <article class="t-item"><div class="t-dot"></div><header><h3>University Teaching Assistant <span>@ University of Waterloo</span></h3><time>2023 — Present</time></header><p class="muted">ME 303, MTE 202, ME 203, ME 547, MTE 360 (various terms)</p></article>
+        <article class="t-item"><div class="t-dot"></div><header><h3>Graduate Research Assistant <span>@ DMRC for Intelligent Neuro‑Rehabilitation, Sharif University</span></h3><time>2020 — 2023</time></header><ul><li>Online CHAR for Parkinson’s therapy using IMU wearables.</li><li>Worked with IMU/Kinect/gait systems; supervised interns.</li></ul></article>
+        <article class="t-item"><div class="t-dot"></div><header><h3>International Research Intern <span>@ M&amp;MoCS Research Center, Italy</span></h3><time>2019</time></header><ul><li>Computational mechanics of composite materials via discontinuous Galerkin approach.</li></ul></article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section container">
+      <h2 class="section__title"><span>Education</span></h2>
+      <div class="grid grid-3">
+        <article class="card tilt"><h3>PhD, Mechanical &amp; Mechatronics Engineering</h3><p class="muted">University of Waterloo — 2023–Present</p><p>Supervisor: Prof. Arash Arami · Neuromechanics, Optimal Control, Assistive Robotics</p></article>
+        <article class="card tilt"><h3>MSc, Mechanical Engineering (Applied Design)</h3><p class="muted">Sharif University of Technology</p><p>Thesis: Complex Activity Recognition for PD patients via IMU‑based wearables</p></article>
+        <article class="card tilt"><h3>BSc, Mechanical Engineering (Mechatronics)</h3><p class="muted">Isfahan University of Technology</p><p>Graduated first in class (2020)</p></article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="section__title"><span>Selected Projects</span></h2>
+      <div class="grid grid-3">
+        <article class="p-card tilt"><div class="p-media"></div><div class="p-body"><h3>CNN‑BiLSTM HAR</h3><p>Multi‑task deep network for simple/complex activity recognition from IMU data.</p><div class="tags"><span>Deep Learning</span><span>IMU</span><span>Python</span></div></div></article>
+        <article class="p-card tilt"><div class="p-media"></div><div class="p-body"><h3>Step‑Length Estimation</h3><p>Sensor fusion for drift‑robust gait parameter estimation validated against Vicon.</p><div class="tags"><span>Gait</span><span>Wearables</span></div></div></article>
+        <article class="p-card tilt"><div class="p-media"></div><div class="p-body"><h3>PD Therapy Dataset</h3><p>Functional &amp; LSVT‑BIG activities collected from 43 subjects with dense labels.</p><div class="tags"><span>Data</span><span>Signal Processing</span></div></div></article>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section container">
+      <h2 class="section__title"><span>Publications</span></h2>
+      <details class="pub"><summary>Accuracy improvement in simple and complex Human Activity Recognition using a CNN‑BiLSTM multi‑task deep neural network <span class="muted">— ICSPIS 2022</span></summary></details>
+      <details class="pub"><summary>Narrowband active noise control in a duct using FxLMS method based on the AVR microcontroller <span class="muted">— Modares Mechanical Engineering, 2022</span></summary></details>
+      <details class="pub"><summary>Three‑dimensional multi‑patch isogeometric analysis of composite laminates with a discontinuous Galerkin approach <span class="muted">— Proc. IMechE Part M, 2021</span></summary></details>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards" class="section container">
+      <h2 class="section__title"><span>Honors &amp; Awards</span></h2>
+      <div class="grid grid-4">
+        <div class="a-card tilt"><h3>1st Rank</h3><p class="muted">Among 127 undergraduates (IUT)</p></div>
+        <div class="a-card tilt"><h3>Merit Admission</h3><p class="muted">Sharif MSc admission</p></div>
+        <div class="a-card tilt"><h3>Top 1%</h3><p class="muted">Iran’s national exam</p></div>
+        <div class="a-card tilt"><h3>Intl. Internship</h3><p class="muted">M&amp;MoCS (Italy), 2019</p></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2 class="section__title"><span>Contact</span></h2>
+      <p>Waterloo, ON, Canada · <a href="mailto:ehsan.tahvilian@uwaterloo.ca">ehsan.tahvilian@uwaterloo.ca</a></p>
+      <form class="contact-form" action="https://formspree.io/f/xjkodnry" method="POST">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required autocomplete="name" /></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" /></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="f-brand">
+        <img src="assets/Ehsan_Logo.png" alt="" width="36" height="36" />
+        <div><strong>Ehsan Tahvilian</strong><div class="muted">PhD Candidate · University of Waterloo</div></div>
+      </div>
+      <div class="f-social">
+        <a class="icon-link" href="https://www.linkedin.com/in/ehsan-tahvilian/" aria-label="LinkedIn"></a>
+        <a class="icon-link" href="https://github.com/EhsanTahvilian" aria-label="GitHub"></a>
+        <a class="icon-link" href="mailto:ehsan.tahvilian@uwaterloo.ca" aria-label="Email"></a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Ehsan Tahvilian. All rights reserved.</p>
+      <p class="tiny"><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
