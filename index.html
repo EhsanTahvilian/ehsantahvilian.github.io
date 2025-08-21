@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <canvas id="bg-net" aria-hidden="true"></canvas>
+  <div class="progress"><div class="progress__bar"></div></div>
   <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -65,6 +67,7 @@
         <div class="social">
           <a class="icon-link" href="https://www.linkedin.com/in/ehsan-tahvilian/" target="_blank" rel="noopener" aria-label="LinkedIn"></a>
           <a class="icon-link" href="https://github.com/EhsanTahvilian" target="_blank" rel="noopener" aria-label="GitHub"></a>
+        <a class="icon-link" href="https://scholar.google.com/citations?user=8EoQ0doAAAAJ&hl=en" aria-label="Google Scholar"></a>
           <a class="icon-link" href="mailto:ehsan.tahvilian@uwaterloo.ca" aria-label="Email"></a>
           <a class="icon-link" href="https://www.aramilab.com/" target="_blank" rel="noopener" aria-label="Arami Lab"></a>
         </div>
@@ -100,7 +103,7 @@
     </section>
 
     <!-- RESEARCH INTERESTS -->
-    <section id="interests" class="section container">
+    <section id="interests" data-style="badges" class="section container">
       <h2 class="section__title"><span>Research Interests</span></h2>
       <div class="grid grid-4">
         <article class="i-card tilt"><div class="i-icon">&#129520;</div><h3>Neuromechanics</h3><p>Modeling muscle/joint dynamics and neural control in human gait.</p></article>
@@ -182,6 +185,7 @@
       <div class="f-social">
         <a class="icon-link" href="https://www.linkedin.com/in/ehsan-tahvilian/" aria-label="LinkedIn"></a>
         <a class="icon-link" href="https://github.com/EhsanTahvilian" aria-label="GitHub"></a>
+        <a class="icon-link" href="https://scholar.google.com/citations?user=8EoQ0doAAAAJ&hl=en" aria-label="Google Scholar"></a>
         <a class="icon-link" href="mailto:ehsan.tahvilian@uwaterloo.ca" aria-label="Email"></a>
       </div>
     </div>

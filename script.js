@@ -62,3 +62,91 @@ document.querySelectorAll('.icon-link').forEach(a => {
 
 // Footer year
 document.getElementById('year')?.insertAdjacentText('beforeend', new Date().getFullYear());
+
+
+// === v3 enhancements ===
+
+// Smooth scroll with header offset
+(function(){
+  const header = document.querySelector('.nav-wrap');
+  const offset = () => header ? header.getBoundingClientRect().height + 8 : 0;
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if(target){
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset();
+        window.scrollTo({ top, behavior:'smooth' });
+        history.pushState(null, '', '#' + id);
+      }
+    });
+  });
+})();
+
+// Top progress bar
+(function(){
+  const bar = document.querySelector('.progress__bar');
+  if(!bar) return;
+  const onScroll = () => {
+    const h = document.documentElement;
+    const s = (h.scrollTop)/(h.scrollHeight - h.clientHeight) * 100;
+    bar.style.width = s + '%';
+  };
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+})();
+
+// Particle network background (AI/ML nodes + edges vibe)
+(function(){
+  const c = document.getElementById('bg-net');
+  if(!c) return;
+  const ctx = c.getContext('2d');
+  let W, H, DPR = window.devicePixelRatio || 1;
+  const N = Math.min(90, Math.floor(window.innerWidth/14));
+  const nodes = Array.from({length: N}, () => ({
+    x: Math.random(), y: Math.random(),
+    vx: (Math.random()-.5)*.0015, vy: (Math.random()-.5)*.0015
+  }));
+  function resize(){
+    W = c.width = Math.floor(innerWidth * DPR);
+    H = c.height = Math.floor(innerHeight * DPR);
+    c.style.width = innerWidth+'px';
+    c.style.height = innerHeight+'px';
+  }
+  function step(){
+    ctx.clearRect(0,0,W,H);
+    // edges
+    for(let i=0;i<N;i++){
+      for(let j=i+1;j<N;j++){
+        const dx = (nodes[i].x - nodes[j].x);
+        const dy = (nodes[i].y - nodes[j].y);
+        const d2 = dx*dx + dy*dy;
+        if(d2 < .02){
+          const a = ( .02 - d2 )/.02;
+          ctx.globalAlpha = a * .4;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x*W, nodes[i].y*H);
+          ctx.lineTo(nodes[j].x*W, nodes[j].y*H);
+          ctx.strokeStyle = '#0C91A6';
+          ctx.lineWidth = 1 * DPR;
+          ctx.stroke();
+        }
+      }
+    }
+    ctx.globalAlpha = 1;
+    // nodes
+    for(let n of nodes){
+      n.x += n.vx; n.y += n.vy;
+      if(n.x<0||n.x>1) n.vx*=-1;
+      if(n.y<0||n.y>1) n.vy*=-1;
+      ctx.beginPath();
+      ctx.arc(n.x*W, n.y*H, 2.2*DPR, 0, Math.PI*2);
+      ctx.fillStyle = '#0C91A6';
+      ctx.fill();
+    }
+    requestAnimationFrame(step);
+  }
+  window.addEventListener('resize', resize);
+  resize(); step();
+})();
